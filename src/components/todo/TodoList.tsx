@@ -18,7 +18,7 @@ const TodoList = ({todos, editTodo, deleteTodo, toggleTodo}: TodoListProps) => {
   }
 
   const handleSave = (id: number) => () => {
-    if (editText.trim() === "") {
+    if (editText.trim() !== "") {
       editTodo(id, editText);
       setEditId(null);
       setEditText("");
